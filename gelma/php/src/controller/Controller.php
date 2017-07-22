@@ -32,8 +32,8 @@ class Controller{
 	/**
 	*	Retrieve relevant resources
 	*/
-	public function run(){
-		$uri = $_SERVER['REQUEST_URI'];
+	public function run($uri){
+		// $uri = $_SERVER['REQUEST_URI'];
 		$request_array = Router::read($uri);
 		$http_method = $_SERVER['REQUEST_METHOD'];
 		$class = $request_array[0];
@@ -119,6 +119,10 @@ class Controller{
 	*/
 	public function to_json(){
 		echo $this->business_objects->to_json();
+	}
+
+	public function to_html(){
+		$this->business_objects->display_as_admin();
 	}
 }
 ?>

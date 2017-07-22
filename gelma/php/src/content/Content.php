@@ -68,7 +68,8 @@ class Content extends DAO\BusinessObject{
 	* Method displaying the completed HTML template for a given business object from an administrator perspective (admin website)
 	*/
 	public function display_as_admin(){
-
+		$html = file_get_contents(__DIR__."/content_admin_display.html.php");
+		echo sprintf($html, $this->id, $this->title);
 	}
 
 	/**
@@ -82,7 +83,8 @@ class Content extends DAO\BusinessObject{
 	* Method displaying the completed HTML form template to update a given business object in the database
 	*/
 	public function display_updt_form(){
-
+		$html = file_get_contents(__DIR__."/content_updt_form.html.php");
+		echo sprintf($html, $this->title);
 	}
 
 	public function to_json(){
