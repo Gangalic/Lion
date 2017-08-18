@@ -1,3 +1,40 @@
-<form>
-  <input type="text" value="%s"/>
+<form method="post" class="form-horizontal" id="content_updt">
+  <div class="form-group">
+    <label for="title" class="control-label col-sm-2">Title</label>
+    <div class="col-sm-10">
+    <input type="text" name="title" id="title" class="form-control" value="%s"/>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="type" class="control-label col-sm-2">Type</label>
+    <div class="col-sm-10">
+    <input type="text" name="type" id="type" class="form-control" value="%s"/>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="date" class="control-label col-sm-2">Creation date</label>
+    <div class="col-sm-10">
+    <input type="text" name="date" id="date" class="form-control" value="%s"/>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="content" class="control-label col-sm-2">Content</label>
+    <div class="col-sm-10">
+    <textarea id="content" name="content" class="form-control">%s</textarea>
+    <div class="btn-toolbar">
+      <div class="btn-group">
+        <a class="btn" href="#"><i class="glyphicon glyphicon-picture"></i></a>
+        <a class="btn" href="#"><i class="glyphicon glyphicon-text-size"></i></a>
+        <a class="btn" href="#"><i class="glyphicon glyphicon-bold"></i></a>
+        <a class="btn" href="#"><i class="glyphicon glyphicon-italic"></i></a>
+        <a class="btn" href="#"><i class="glyphicon glyphicon-console"></i></a>
+      </div>
+    </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-default">Update</button>
+    </div>
+  </div>
 </form>

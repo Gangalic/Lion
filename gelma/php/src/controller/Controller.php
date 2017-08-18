@@ -121,8 +121,25 @@ class Controller{
 		echo $this->business_objects->to_json();
 	}
 
-	public function to_html(){
+	/**
+	* Method displaying the completed HTML template for a given business object from a general end-user perspective (public website)
+	*/
+	public function display_as_user(){
+		$this->business_objects->display_as_user();
+	}
+
+	/**
+	* Method displaying the completed HTML template for a given business object from an administrator perspective (admin website)
+	*/
+	public function display_as_admin(){
 		$this->business_objects->display_as_admin();
+	}
+
+	/**
+	* Method displaying the completed HTML form template to update a given business object in the database
+	*/
+	public function display_updt_form(){
+		$this->business_objects[0]->display_updt_form();
 	}
 }
 ?>

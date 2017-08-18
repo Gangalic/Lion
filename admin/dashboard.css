@@ -104,3 +104,9 @@ body {
   display: inline-block;
   border-radius: 50%;
 }
+
+form .btn-toolbar{
+  position: relative;
+  top: 0;
+  left: 0;
+}

@@ -84,7 +84,7 @@ class Content extends DAO\BusinessObject{
 	*/
 	public function display_updt_form(){
 		$html = file_get_contents(__DIR__."/content_updt_form.html.php");
-		echo sprintf($html, $this->title);
+		echo sprintf($html, $this->title, $this->type, $this->date, $this->content);
 	}
 
 	public function to_json(){

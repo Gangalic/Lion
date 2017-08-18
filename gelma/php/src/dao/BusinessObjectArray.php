@@ -34,19 +34,19 @@ class BusinessObjectArray implements \ArrayAccess{
 	}
 
 	public function display_as_user(){
-
+		echo "<ul>";
+		foreach($this->array as $bo){
+			$bo->display_as_user();
+		}
+		echo "</ul>";
 	}
 
 	public function display_as_admin(){
-		if($this->size > 2){
-			echo "<ul>";
-			foreach($this->array as $bo){
-				$bo->display_as_admin();
-			}
-			echo "</ul>";
-		} else {
-			$this->array[0]->display_updt_form();
+		echo "<ul>";
+		foreach($this->array as $bo){
+			$bo->display_as_admin();
 		}
+		echo "</ul>";
 	}
 
 	public function to_json(){

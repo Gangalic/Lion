@@ -11,13 +11,24 @@ class Router{
     if(preg_match("#^/?$#", $uri) == 1){
       return array("Dashboard");
     }
-    elseif(preg_match("#^/admin/?$#", $uri) == 1){
+    elseif(preg_match("#/admin/?$#", $uri) == 1){
       return array("Dashboard");
     }
-    elseif(preg_match("#^/admin/content/?$#", $uri) == 1){
-      return array("Content");
+    elseif(preg_match("#/admin/content/event/?$#", $uri) == 1){
+      return array("Content", "event");
     }
-    elseif(preg_match("#^/admin/content/[0-9]+/?$#", $uri) == 1){
+    elseif(preg_match("#/admin/content/event/update/[0-9]+/?$#", $uri) == 1){
+      $parameters = explode("/", $uri);
+      //get last parameter corresponding to the content id
+      $last_parameter;
+      foreach($parameters as $parameter){
+        if(!empty($parameter)){
+          $last_parameter = $parameter;
+        }
+      }
+      return array("Content", $last_parameter);
+    }
+    elseif(preg_match("#/admin/content/event/[0-9]+/?$#", $uri) == 1){
       $parameters = explode("/", $uri);
       //get last parameter corresponding to the content id
       $last_parameter;
