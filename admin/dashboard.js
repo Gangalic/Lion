@@ -37,10 +37,14 @@ $(document).ready(function(){
     }),
     new Array("localhost/Lion/trunk/admin/content/event/add/?$", "#event", function(){
       $("#event div div.placeholder").load("/Lion/trunk/gelma/php/src/content/content_add_form.html.php", function(){
-        // TODO
-        $("#add_content btn-toolbar btn").click(function(){
-          var selected_text = window.getSelection().toString();
+
+        var roxyFileman = '/Lion/trunk/admin/fileman/index.html';
+        $(function(){
+           CKEDITOR.replace( 'content',{filebrowserBrowseUrl:roxyFileman,
+                                        filebrowserImageBrowseUrl:roxyFileman+'?type=image',
+                                        removeDialogTabs: 'link:upload;image:upload'});
         });
+
         $("#add_content").submit(function(event) {
           event.preventDefault();
           var form_data = $(this).serialize();
@@ -63,10 +67,14 @@ $(document).ready(function(){
         dataType: "html",
         success: function(data){
           var update_form = $("#event").append(data);
-          // TODO
-          update_form.find("#content_updt btn-toolbar btn").click(function(){
-            var selected_text = window.getSelection().toString();
+
+          var roxyFileman = '/Lion/trunk/admin/fileman/index.html';
+          $(function(){
+             CKEDITOR.replace( 'content',{filebrowserBrowseUrl:roxyFileman,
+                                          filebrowserImageBrowseUrl:roxyFileman+'?type=image',
+                                          removeDialogTabs: 'link:upload;image:upload'});
           });
+
           update_form.find("#content_updt").submit(function(event){
             event.preventDefault();
             var form_data = $(this).serialize();

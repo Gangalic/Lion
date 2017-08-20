@@ -21,15 +21,6 @@
     <label for="content" class="control-label col-sm-2">Content</label>
     <div class="col-sm-10">
     <textarea id="content" name="content" class="form-control">%s</textarea>
-    <div class="btn-toolbar">
-      <div class="btn-group">
-        <a class="btn" href="#"><i class="glyphicon glyphicon-picture"></i></a>
-        <a class="btn" href="#"><i class="glyphicon glyphicon-text-size"></i></a>
-        <a class="btn" href="#"><i class="glyphicon glyphicon-bold"></i></a>
-        <a class="btn" href="#"><i class="glyphicon glyphicon-italic"></i></a>
-        <a class="btn" href="#"><i class="glyphicon glyphicon-console"></i></a>
-      </div>
-    </div>
     </div>
   </div>
   <div class="form-group">
