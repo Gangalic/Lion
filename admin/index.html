@@ -1,4 +1,10 @@
 <!-- $_SERVER['REDIRECT_URL']  -->
+<?php
+  session_start();
+  if(!isset($_SESSION["login"])){
+    header("Location: http://localhost/Lion/trunk/admin/login.html");
+  }else{
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -88,3 +94,6 @@
     <script src="/Lion/trunk/admin/dashboard.js"></script>
   </body>
 </html>
+<?php
+  }
+?>
