@@ -1,2 +1,0 @@
-# Lion
-BEST Lyon website
