@@ -27,7 +27,7 @@ a:hover {
 #welcome{
   background-color: #fff;
   background-image: url("../img/welcome.jpg");
-  background: url(../img/welcome.jpg) no-repeat center center fixed; 
+  background: url(../img/welcome.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -39,7 +39,7 @@ a:hover {
 #presentation{
   background-color: #1973BE; /*blue*/
   background-image: url("../img/presentation.jpeg");
-  background: url(../img/presentation.jpeg) no-repeat center center fixed; 
+  background: url(../img/presentation.jpeg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -51,7 +51,7 @@ a:hover {
 #events{
   background-color: #69CD28; /*green*/
   background-image: url("../img/events.jpg");
-  background: url(../img/events.jpg) no-repeat center center fixed; 
+  background: url(../img/events.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -63,7 +63,7 @@ a:hover {
 #recruitment{
   background-color: #FAA519; /*orange*/
   background-image: url("../img/recruitment.jpg");
-  background: url(../img/recruitment.jpg) no-repeat center center fixed; 
+  background: url(../img/recruitment.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -75,19 +75,21 @@ a:hover {
 #partners{
   background-color: #1973BE;
   background-image: url("../img/partners.jpeg");
-  background: url(../img/partners.jpeg) no-repeat center center fixed; 
+  background: url(../img/partners.jpeg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/partners.jpeg', sizingMethod='scale')";
   filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/partners.jpeg', sizingMethod='scale');
+
+  color: white;
 }
 
 #contact{
   background-color: #69CD28;
   background-image: url("../img/contact.jpeg");
-  background: url(../img/contact.jpeg) no-repeat center center fixed; 
+  background: url(../img/contact.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -252,14 +254,14 @@ body {
 .nav-tabs > li.active > a:focus {
   background-color: rgba(0,0,0,0);
   border-style: none;
-} 
+}
 
 .nav-tabs > li:hover > a,
 .nav-tabs > li:hover > a:hover,
 .nav-tabs > li:hover > a:focus {
   background-color: rgba(0,0,0,0);
   border-style: none;
-} 
+}
 
 .nav-tabs{
   text-align: center; /*center the buttons*/
@@ -279,6 +281,10 @@ body {
   list-style-type: none;
 }
 
+.nav.masthead-nav{
+    padding:0;
+}
+
 #recruitment h2, #recruitment p, #recruitment a, #recruitment button{
   color: black;
 }
@@ -287,7 +293,12 @@ body {
   color: white;
 }
 
-#partners li a{
+#contact ul{
+    list-style-type: none;
+    margin: auto;
+}
+
+#partners li a, #contact li a{
   color: white;
 }
 
